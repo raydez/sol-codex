@@ -92,7 +92,7 @@ async function runOne({ task, variant, repeat, root, manifest, keepWorktrees, dr
       if (manifest.environment?.reasoningEffort) args.push('--config', `model_reasoning_effort="${String(manifest.environment.reasoningEffort)}"`);
       for (const a of manifest.defaults?.codexArgs || []) args.push(String(a));
       for (const a of task.codexArgs || []) args.push(String(a));
-      args.push('--config', `plugins."${pluginKey}".enabled=${vcfg.pluginEnabled ? 'true' : 'false'}`);
+      args.push('--config', `plugins.${pluginKey}.enabled=${vcfg.pluginEnabled ? 'true' : 'false'}`);
       if (variant === 'native' && manifest.disableMcpForNative !== false) {
         const mcpServerName = manifest.mcpServerName || 'sol_codex';
         args.push('--config', `mcp_servers.${mcpServerName}.enabled=false`);
