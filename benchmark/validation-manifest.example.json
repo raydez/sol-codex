@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "outputDir": ".sol-codex-benchmark",
+  "environment": {
+    "model": "SET_EXACT_CODEX_MODEL",
+    "reasoningEffort": "medium"
+  },
+  "defaults": {
+    "sandbox": "workspace-write",
+    "taskTimeoutMs": 1800000,
+    "verifyTimeoutMs": 180000,
+    "codexArgs": []
+  },
+  "tasks": [
+    {
+      "id": "bug-001",
+      "repo": "/absolute/path/to/repository",
+      "revision": "PIN_EXACT_40_HEX_COMMIT_SHA",
+      "prompt": "Fix the specified bug with the smallest correct change. Run the relevant tests and do not modify unrelated behavior.",
+      "verify": [
+        ["npm", "test"]
+      ]
+    }
+  ]
+}

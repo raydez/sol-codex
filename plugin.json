@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "sol-codex",
+  "version": "0.2.1",
+  "description": "Harness optimization for Codex: action fusion, observation packing, evidence-preserving reduction, and context state preservation.",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "agent-harness",
+    "mcp",
+    "context-engineering"
+  ],
+  "extensions": {
+    "com.openai": {
+      "hooks": "./hooks/hooks.json",
+      "interface": {
+        "displayName": "SoL-Codex",
+        "shortDescription": "Harness optimization for long-running Codex agents",
+        "longDescription": "Reduces redundant agent work with action fusion, local observation archives, evidence-preserving receipts, and compact-state restoration.",
+        "developerName": "SoL-Codex Contributors",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "defaultPrompt": [
+          "Use the SoL-Codex harness optimizer while working on this repository.",
+          "Use SoL-Codex exact evidence recall when a large diagnostic output was archived."
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "sol-codex",
+  "version": "0.2.1",
+  "description": "Harness optimization for Codex.",
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
+}

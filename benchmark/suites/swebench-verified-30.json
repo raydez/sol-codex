@@ -1,0 +1,42 @@
+{
+  "name": "swebench-verified-30",
+  "dataset": "SWE-bench/SWE-bench_Verified",
+  "purpose": "A fixed 30-instance real-GitHub-issue validation subset for cost/quality methodology checks. Use the official SWE-bench evaluator for correctness.",
+  "instanceIds": [
+    "astropy__astropy-12907",
+    "astropy__astropy-13453",
+    "astropy__astropy-13579",
+    "astropy__astropy-14096",
+    "django__django-10554",
+    "django__django-10880",
+    "django__django-10914",
+    "django__django-11066",
+    "django__django-11239",
+    "django__django-12325",
+    "matplotlib__matplotlib-14623",
+    "matplotlib__matplotlib-20676",
+    "matplotlib__matplotlib-20826",
+    "matplotlib__matplotlib-22865",
+    "matplotlib__matplotlib-26466",
+    "pytest-dev__pytest-6197",
+    "pytest-dev__pytest-10356",
+    "scikit-learn__scikit-learn-25102",
+    "scikit-learn__scikit-learn-26194",
+    "sphinx-doc__sphinx-9602",
+    "sphinx-doc__sphinx-9658",
+    "sphinx-doc__sphinx-11510",
+    "sympy__sympy-11618",
+    "sympy__sympy-23262",
+    "sympy__sympy-23413",
+    "sympy__sympy-23534",
+    "psf__requests-2931",
+    "pydata__xarray-7393",
+    "pylint-dev__pylint-4661",
+    "matplotlib__matplotlib-23314"
+  ],
+  "notes": [
+    "SWE-bench Verified contains 500 human-validated GitHub issue/PR tasks.",
+    "This subset is for reproducible SoL-Codex A/B methodology, not a new leaderboard.",
+    "SWE-bench infrastructure can have instance-specific evaluator/image issues; always sanity-check the selected instances with the official gold patch before publishing conclusions."
+  ]
+}

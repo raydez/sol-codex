@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+.sol-codex-data/
+coverage/
+*.log
+.sol-codex-benchmark/

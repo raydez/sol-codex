@@ -1,0 +1,39 @@
+{
+  "name": "sol-codex",
+  "version": "0.2.1",
+  "description": "A harness optimization layer for long-running Codex agents.",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node scripts/check-syntax.mjs && node --test",
+    "doctor": "node src/cli/main.mjs doctor",
+    "init": "node src/cli/main.mjs init",
+    "report": "node src/cli/main.mjs report",
+    "install:local": "node scripts/install-local.mjs",
+    "uninstall:local": "node scripts/uninstall-local.mjs",
+    "install:modern-mcp": "npm install --include=optional --ignore-scripts",
+    "benchmark": "node src/cli/main.mjs benchmark"
+  },
+  "bin": {
+    "sol-codex": "./src/cli/main.mjs"
+  },
+  "keywords": [
+    "codex",
+    "openai-codex",
+    "agent-harness",
+    "coding-agent",
+    "mcp",
+    "context-engineering",
+    "agentic-engineering",
+    "harness-optimization"
+  ],
+  "optionalDependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "zod": "^4.0.0"
+  }
+}

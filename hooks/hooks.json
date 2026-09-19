@@ -1,0 +1,98 @@
+{
+  "description": "SoL-Codex harness optimization hooks",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/hooks/bin/session-start.mjs\"",
+            "timeout": 10,
+            "statusMessage": "Initializing SoL-Codex",
+            "additionalContextLimit": 1000,
+            "commandWindows": "node \"%PLUGIN_ROOT%\\hooks\\bin\\session-start.mjs\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/hooks/bin/user-prompt-submit.mjs\"",
+            "timeout": 10,
+            "commandWindows": "node \"%PLUGIN_ROOT%\\hooks\\bin\\user-prompt-submit.mjs\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash|apply_patch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/hooks/bin/pre-tool-use.mjs\"",
+            "timeout": 10,
+            "commandWindows": "node \"%PLUGIN_ROOT%\\hooks\\bin\\pre-tool-use.mjs\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/hooks/bin/post-tool-use.mjs\"",
+            "timeout": 120,
+            "statusMessage": "SoL-Codex harness processing",
+            "additionalContextLimit": 1200,
+            "commandWindows": "node \"%PLUGIN_ROOT%\\hooks\\bin\\post-tool-use.mjs\""
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "manual|auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/hooks/bin/pre-compact.mjs\"",
+            "timeout": 20,
+            "commandWindows": "node \"%PLUGIN_ROOT%\\hooks\\bin\\pre-compact.mjs\""
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "matcher": "manual|auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/hooks/bin/post-compact.mjs\"",
+            "timeout": 20,
+            "commandWindows": "node \"%PLUGIN_ROOT%\\hooks\\bin\\post-compact.mjs\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/hooks/bin/stop.mjs\"",
+            "timeout": 30,
+            "commandWindows": "node \"%PLUGIN_ROOT%\\hooks\\bin\\stop.mjs\""
+          }
+        ]
+      }
+    ]
+  }
+}

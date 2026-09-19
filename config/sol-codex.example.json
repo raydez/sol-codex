@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "actionFusion": {
+    "enabled": false,
+    "autoDetect": true,
+    "maxCommands": 1,
+    "timeoutMs": 120000,
+    "maxOutputBytes": 2000000,
+    "rules": [
+      {"extensions": [".ts", ".tsx", ".js", ".jsx"], "commands": ["typecheck"]}
+    ]
+  },
+  "observationPack": {"enabled": true, "thresholdBytes": 10240, "previewChars": 1200, "retainRecent": 2},
+  "evidenceReducer": {"enabled": true, "thresholdBytes": 20000, "maxQuotes": 8, "quoteChars": 1200},
+  "contextCompact": {"enabled": true, "maxObjectiveChars": 4000, "maxItems": 30},
+  "packedCommands": [
+    {"name": "typecheck", "command": ["npm", "run", "typecheck"], "timeoutMs": 120000},
+    {"name": "test", "command": ["npm", "test"], "timeoutMs": 180000}
+  ],
+  "storage": {"retentionDays": 7},
+  "metrics": {"enabled": true}
+}

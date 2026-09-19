@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "outputDir": ".sol-codex-benchmark",
+  "defaults": {
+    "sandbox": "workspace-write",
+    "taskTimeoutMs": 1800000,
+    "verifyTimeoutMs": 180000,
+    "codexArgs": []
+  },
+  "tasks": [
+    {
+      "id": "example-bug-fix",
+      "repo": ".",
+      "revision": "HEAD",
+      "prompt": "Find the failing unit test, identify the smallest correct fix, implement it, and verify the relevant tests. Do not refactor unrelated code.",
+      "verify": [
+        [
+          "npm",
+          "test"
+        ]
+      ]
+    }
+  ]
+}
