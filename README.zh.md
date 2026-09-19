@@ -26,7 +26,7 @@ SoL-Codex 受 NVIDIA 的 SoL-Pi Harness 效率理念启发，是一个独立的 
 macOS / Linux：
 
 ```bash
-unzip sol-codex.zip
+git clone https://github.com/raydez/sol-codex.git
 cd sol-codex
 ./install.sh
 ```
@@ -34,7 +34,7 @@ cd sol-codex
 Windows PowerShell：
 
 ```powershell
-Expand-Archive sol-codex.zip
+git clone https://github.com/raydez/sol-codex.git
 cd sol-codex
 ./install.ps1
 ```

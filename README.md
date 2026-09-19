@@ -26,7 +26,7 @@ It implements four mechanisms:
 macOS / Linux:
 
 ```bash
-unzip sol-codex.zip
+git clone https://github.com/raydez/sol-codex.git
 cd sol-codex
 ./install.sh
 ```
@@ -34,7 +34,7 @@ cd sol-codex
 Windows PowerShell:
 
 ```powershell
-Expand-Archive sol-codex.zip
+git clone https://github.com/raydez/sol-codex.git
 cd sol-codex
 ./install.ps1
 ```
